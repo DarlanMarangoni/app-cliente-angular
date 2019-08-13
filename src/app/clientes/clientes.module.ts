@@ -10,7 +10,8 @@ import { ClienteFormComponent } from './cliente-form/cliente-form.component';
 
     declarations: [
         ClienteComponent, 
-        ClienteListComponent, ClienteFormComponent
+        ClienteListComponent,
+        ClienteFormComponent
     ],
     imports: [
         HttpClientModule,

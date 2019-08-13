@@ -1,5 +1,11 @@
-<ap-cliente 
-            *ngFor="let cliente of clientes" [id]="cliente.id" 
+<h2>Lista de Clientes</h2>
+
+<ol class="list-unstyled row">
+    <li *ngFor="let cliente of clientes" class="col-4">
+        <ap-cliente
+            [id]="cliente.id" 
             [nome]="cliente.nome" [cpf]="cliente.cpf" 
             [dataNascimento]="cliente.dataNascimento"> 
-</ap-cliente>
+        </ap-cliente>
+    </li>
+</ol>

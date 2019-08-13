@@ -3,7 +3,7 @@ import { Cliente } from '../cliente/cliente';
 import { ClienteService } from '../cliente/cliente.service';
 
 @Component({
-  selector: 'app-cliente-list',
+  selector: 'ap-clilist',
   templateUrl: './cliente-list.component.html',
   styleUrls: ['./cliente-list.component.css']
 })
@@ -20,7 +20,7 @@ export class ClienteListComponent implements OnInit {
   ngOnInit(): void{
     this.clienteService.listFromClientes().subscribe(clientes => {
         this.clientes = clientes;
+        console.log(this.clientes);
     });
-    
   }
 }

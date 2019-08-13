@@ -14,4 +14,9 @@ export class ClienteService{
     listFromClientes(){
         return this.http.get<Cliente[]>(API + '/clientes');
     }
+
+    user(userId: string){
+        console.log(API + '/clientes/' + userId);
+        return this.http.get<Cliente>(API + '/clientes/' + userId);
+    }
 }

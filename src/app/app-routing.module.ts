@@ -7,7 +7,7 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'clientes', component: ClienteListComponent },
-  { path: 'clientes/id', component: ClienteFormComponent },
+  { path: 'clientes/:userId', component: ClienteFormComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
