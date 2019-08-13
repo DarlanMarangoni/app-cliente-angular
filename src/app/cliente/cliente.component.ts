@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'ap-cliente',
@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
 })
 export class ClienteComponent{
 
-    id='1'
-    nome='darlan';
-    cpf='123123123';
-    dataNascimento='30-05-1990';
+    @Input() id=''
+    @Input() nome='';
+    @Input() cpf='';
+    @Input() dataNascimento='';
 }
