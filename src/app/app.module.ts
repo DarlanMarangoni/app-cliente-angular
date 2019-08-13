@@ -15,7 +15,8 @@ import { ClientesModule } from './clientes/clientes.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ClientesModule
+    ClientesModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
