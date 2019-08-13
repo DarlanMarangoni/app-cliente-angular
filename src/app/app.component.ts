@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ClienteService } from './clientes/cliente/cliente.service';
 
 @Component({
   selector: 'app-root',
@@ -11,12 +12,8 @@ export class AppComponent {
 
   clientes: Object[] = [];
 
-  constructor(http: HttpClient){
-    http
-      .get<Object[]>('http://localhost:8082/clientes')
-      .subscribe(clientes => {
-        console.log(clientes);
-        this.clientes = clientes
-    });
+  constructor(clienteService: ClienteService){
+
+    clienteService.listFromClientes().subscribe(clientes => this.clientes = clientes);
   }
 }
