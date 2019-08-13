@@ -1,19 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ClienteService } from './clientes/cliente/cliente.service';
+import { Cliente } from './clientes/cliente/cliente';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'app-Cliente';
 
-  clientes: Object[] = [];
+  clientes: Cliente[] = [];
 
-  constructor(clienteService: ClienteService){
+  constructor(private clienteService: ClienteService){
 
-    clienteService.listFromClientes().subscribe(clientes => this.clientes = clientes);
+  }
+  
+  ngOnInit(): void{
+    this.clienteService.listFromClientes().subscribe(clientes => {
+        this.clientes = clientes;
+    });
+    
   }
 }

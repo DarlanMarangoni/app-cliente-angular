@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Cliente } from './cliente';
 
 const API = 'http://localhost:8082';
 
@@ -11,6 +12,6 @@ export class ClienteService{
     }
 
     listFromClientes(){
-        return this.http.get<Object[]>(API + '/clientes');
+        return this.http.get<Cliente[]>(API + '/clientes');
     }
 }

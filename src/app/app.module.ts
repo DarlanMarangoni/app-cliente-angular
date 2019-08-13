@@ -15,7 +15,6 @@ import { ClientesModule } from './clientes/clientes.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     ClientesModule
   ],
   providers: [],
