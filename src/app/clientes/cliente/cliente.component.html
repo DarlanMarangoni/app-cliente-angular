@@ -6,7 +6,8 @@
           <td>{{ nome }}</td>
           <td>{{ cpf }}</td>
           <td>{{ dataNascimento}}</td>
-          <td><a (click)="remove(id)">Delete</a></td>
+          <td><a (click)="remove(id)">Deletar</a></td>
+          <td><a [routerLink]="['/clientes', id]">Editar</a></td>
         </tr>        
       </tbody>
     </table>
