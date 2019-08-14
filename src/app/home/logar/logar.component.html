@@ -1,36 +1,21 @@
 <h4 class="text-center">Cadastrar</h4>
 
-<form class="form mt-4">
+<form [formGroup]="logarForm" class="form mt-4">
 
     <div class="form-group">
         <input 
-             class="form-control" 
-             placeholder="id" 
-             autofocus>  
-        </div>
-
-    <div class="form-group">
-        <input 
+            formControlName="userId"  
             class="form-control" 
-            placeholder="nome" 
-            autofocus>  
-    </div>
-
-    <div class="form-group">
-        <input 
-            class="form-control" 
-            placeholder="cpf" 
-            autofocus>  
-    </div>
-
-    <div class="form-group">
-        <input 
-            class="form-control" 
-            placeholder="data de nascimento" 
-            autofocus>  
+            placeholder="id" 
+            autofocus> 
+        <ap-vmessages 
+            *ngIf="logarForm.get('userId').errors?.required  "
+            msg="User id is required">
+        </ap-vmessages>         
     </div>
 
     <button 
+        [disabled]="logarForm.invalid"
         type="submit" 
         class="btn btn-primary btn-block">
         buscar
