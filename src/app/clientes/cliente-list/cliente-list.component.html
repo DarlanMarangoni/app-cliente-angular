@@ -1,11 +1,18 @@
 <h2>Lista de Clientes</h2>
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Cpf</th>
+        <th scope="col">Data de Nascimento</th>
+        </tr>
+    </thead>
+</table>
+<ap-cliente
+    *ngFor="let cliente of clientes"
+    [id]="cliente.id" 
+    [nome]="cliente.nome" [cpf]="cliente.cpf" 
+    [dataNascimento]="cliente.dataNascimento"> 
+</ap-cliente>
 
-<ol class="list-unstyled row">
-    <li *ngFor="let cliente of clientes" class="col-4">
-        <ap-cliente
-            [id]="cliente.id" 
-            [nome]="cliente.nome" [cpf]="cliente.cpf" 
-            [dataNascimento]="cliente.dataNascimento"> 
-        </ap-cliente>
-    </li>
-</ol>

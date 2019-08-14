@@ -36,9 +36,9 @@ export class CadastrarComponent implements OnInit{
                                     this.cadastrarForm.get('dataNascimento').value
         
         );
-        let clienteJson = JSON.parse(JSON.stringify(this.cliente));
+
         console.log('cadastrando' + this.cliente.nome);
-        this.clienteService.insert(clienteJson)
+        this.clienteService.insert(this.cliente)
             .subscribe(() => this.router.navigate(['clientes']));
     }
 
