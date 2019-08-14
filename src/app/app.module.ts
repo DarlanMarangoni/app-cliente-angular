@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ClientesModule } from './clientes/clientes.module';
 import { ErrorsModule } from './errors/errors.module';
 import { HomeModule } from './home/home.module';
+import { CadastroModule } from './cadastro/cadastrar/cadastro.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HomeModule } from './home/home.module';
     ClientesModule,
     AppRoutingModule,
     ErrorsModule,
-    HomeModule
+    HomeModule,
+    CadastroModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,7 +12,7 @@ export class LogarComponent implements OnInit{
     
     constructor(private formBuilder: FormBuilder,
                 private clienteService: ClienteService,
-                private router: Router                               
+                private router: Router                                  
     ){
         
     }

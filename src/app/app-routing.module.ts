@@ -4,10 +4,12 @@ import { ClienteListComponent } from './clientes/cliente-list/cliente-list.compo
 import { ClienteFormComponent } from './clientes/cliente-form/cliente-form.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { LogarComponent } from './home/logar/logar.component';
+import { CadastrarComponent } from './cadastro/cadastrar/cadastrar.component';
 
 
 const routes: Routes = [
   { path: '', component: LogarComponent },
+  { path: 'cadastrar', component: CadastrarComponent },
   { path: 'clientes', component: ClienteListComponent },
   { path: 'clientes/:userId', component: ClienteFormComponent },
   { path: '**', component: NotFoundComponent }

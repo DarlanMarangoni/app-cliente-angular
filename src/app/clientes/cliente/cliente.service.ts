@@ -19,4 +19,10 @@ export class ClienteService{
         console.log(API + '/clientes/' + userId);
         return this.http.get<Cliente>(API + '/clientes/' + userId);
     }
+
+    insert(cliente: Cliente){
+        console.log(API + '/clientes/');
+        console.log(cliente)
+        return this.http.post(API + '/clientes', cliente);
+    }
 }
