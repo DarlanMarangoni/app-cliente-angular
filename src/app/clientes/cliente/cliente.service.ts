@@ -25,4 +25,10 @@ export class ClienteService{
         console.log(cliente)
         return this.http.post(API + '/clientes', cliente);
     }
+
+    delete(id: string){
+        console.log(API + '/clientes/' + id);
+        console.log(id)
+        return this.http.delete(API + '/clientes/' + id);
+    }
 }

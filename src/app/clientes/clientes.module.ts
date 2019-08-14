@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClienteComponent } from './cliente/cliente.component';
 import { ClienteListComponent } from './cliente-list/cliente-list.component';
 import { ClienteFormComponent } from './cliente-form/cliente-form.component';
+import { RouterModule } from '@angular/router';
+import { DeleteModule } from '../delete/delete.module';
 
 @NgModule({
 
@@ -15,7 +17,9 @@ import { ClienteFormComponent } from './cliente-form/cliente-form.component';
     ],
     imports: [
         HttpClientModule,
-        CommonModule
+        CommonModule, 
+        RouterModule,
+        DeleteModule
     ]
 })
 export class ClientesModule{}
