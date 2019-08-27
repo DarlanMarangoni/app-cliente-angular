@@ -5,12 +5,10 @@ import { ClienteFormComponent } from './clientes/cliente-form/cliente-form.compo
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { LogarComponent } from './home/logar/logar.component';
 import { CadastrarComponent } from './cadastro/cadastrar/cadastrar.component';
-import {  DeletarComponent } from './delete/deletar/deletar.component';
 
 
 const routes: Routes = [
   { path: '', component: CadastrarComponent },
-  { path: 'clientes/deletar', component: DeletarComponent },
   { path: 'clientes', component: ClienteListComponent },
   { path: 'clientes/:userId', component: ClienteFormComponent },
   { path: '**', component: NotFoundComponent }

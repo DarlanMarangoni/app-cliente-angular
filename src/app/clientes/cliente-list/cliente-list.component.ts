@@ -25,7 +25,7 @@ export class ClienteListComponent implements OnInit {
      
   }
 
-  remove(id: string){
+  remove(id){
   this.clientes$ = this.clienteService
       .delete(id)
       .pipe(switchMap(() => this.clienteService.listFromClientes()))

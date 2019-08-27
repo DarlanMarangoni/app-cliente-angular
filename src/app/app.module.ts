@@ -8,7 +8,6 @@ import { ClientesModule } from './clientes/clientes.module';
 import { ErrorsModule } from './errors/errors.module';
 import { HomeModule } from './home/home.module';
 import { CadastroModule } from './cadastro/cadastrar/cadastro.module';
-import { DeleteModule } from './delete/delete.module';
 
 
 @NgModule({
@@ -22,8 +21,7 @@ import { DeleteModule } from './delete/delete.module';
     AppRoutingModule,
     ErrorsModule,
     HomeModule,
-    CadastroModule,
-    DeleteModule
+    CadastroModule
   ],
   providers: [],
   bootstrap: [AppComponent]

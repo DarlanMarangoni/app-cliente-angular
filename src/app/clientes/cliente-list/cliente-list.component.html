@@ -1,20 +1,24 @@
-<h2>Lista de Clientes</h2>
-<table class="table">
+<h2 class="text-center">Lista de Clientes</h2>
+<table class="table table-primary table-striped">
     <thead>
         <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Nome</th>
-        <th scope="col">Cpf</th>
-        <th scope="col">Data de Nascimento</th>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Cpf</th>
+            <th>Data de Nascimento</th>
+            <th>Deletar</th>
+            <th>Editar</th>
         </tr>
     </thead>
-</table>
-<div *ngIf="(clientes$ | async) as clientes">
-    <ap-cliente
-        *ngFor="let cliente of clientes"
-        [id]="cliente.id" 
-        [nome]="cliente.nome" [cpf]="cliente.cpf" 
-        [dataNascimento]="cliente.dataNascimento"> 
-    </ap-cliente>
-</div>
+    <tbody *ngIf="(clientes$ | async) as clientes">
+        <tr *ngFor="let cliente of clientes">
+                <td>{{ cliente.id }}</td>
+                <td>{{ cliente.nome }}</td>
+                <td>{{ cliente.cpf }}</td>
+                <td>{{ cliente.dataNascimento}}</td>
+                <td><i class="fa fa-trash fa-2x" (click)="remove(cliente.id)"></i></td>      
+                <td><i class="fa fa-edit fa-2x" [routerLink]="['/clientes', cliente.id]"></i></td> 
+        </tr>
+    </tbody>
+ </table>
 
