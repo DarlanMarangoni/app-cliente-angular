@@ -31,4 +31,10 @@ export class ClienteService{
         console.log(id)
         return this.http.delete(API + '/clientes/' + id);
     }
+
+    update(id:string, cliente: Cliente){
+        console.log(API + '/clientes/' + id);
+        console.log(cliente)
+        return this.http.put(API + '/clientes/' + id + cliente.id, cliente);
+    }
 }

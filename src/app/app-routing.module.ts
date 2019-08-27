@@ -9,8 +9,7 @@ import {  DeletarComponent } from './delete/deletar/deletar.component';
 
 
 const routes: Routes = [
-  { path: '', component: LogarComponent },
-  { path: 'cadastrar', component: CadastrarComponent },
+  { path: '', component: CadastrarComponent },
   { path: 'clientes/deletar', component: DeletarComponent },
   { path: 'clientes', component: ClienteListComponent },
   { path: 'clientes/:userId', component: ClienteFormComponent },

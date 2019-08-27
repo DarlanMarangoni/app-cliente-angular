@@ -6,8 +6,8 @@
           <td>{{ nome }}</td>
           <td>{{ cpf }}</td>
           <td>{{ dataNascimento}}</td>
-          <td><a (click)="remove(id)">Deletar</a></td>
-          <td><a [routerLink]="['/clientes', id]">Editar</a></td>
+          <td><i class="fa fa-trash fa-2x" (click)="remove(id)"></i></td>      
+          <td><i class="fa fa-edit fa-2x" [routerLink]="['/clientes', id]"></i></td>          
         </tr>        
       </tbody>
     </table>

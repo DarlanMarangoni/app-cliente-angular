@@ -1,6 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { ClienteService } from './cliente.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Cliente } from './cliente';
+import { switchMap } from 'rxjs/operators';
+import { ClienteListComponent } from '../cliente-list/cliente-list.component';
 
 @Component({
     selector: 'ap-cliente',
@@ -13,12 +17,15 @@ export class ClienteComponent{
     @Input() cpf='';
     @Input() dataNascimento='';
 
+    clientes$: Observable<Cliente[]>;
+
     constructor(private clienteService: ClienteService,
-                private router: Router  ){
+                private router: Router,
+                private cli: ClienteListComponent ){
 
     }
 
     remove(id: string){
-        this.clienteService.delete(id).subscribe(() => this.router.navigate(['']));
+        this.cli.remove(id);
     }
 }
